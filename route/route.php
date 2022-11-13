@@ -3,10 +3,11 @@
 Route::get('think', function () {
     return 'hello,ThinkPHP5!';
 });
-Route::get('getone', 'index/getone');
-Route::get('getbooks', 'index/getbooks');
-Route::get('/', function(){
-    return "ok";
+
+Route::get('/', 'index/getView');
+Route::any('checksummit', 'index/checkSummit');
+Route::get('/t', function(){
+    return "It works!";
 });
 
 return [
